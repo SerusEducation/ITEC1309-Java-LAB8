@@ -1,32 +1,34 @@
 package order1;
 
+import java.util.Scanner;
+
 public class Main {
 
 	public static void main(String[] args) {
-		/*
-			OEMFactory cp = new CPFactory();
-			Chicken friedChicken = cp.createChicken();
-			System.out.println("This chicken is " + friedChicken.getChickenType());
-			Dip sweetDip = cp.createDip();
-			System.out.println("This dip is " + sweetDip.getDipType());
+		try {
+			boolean isExit = false;
+			do {
 			
-			OEMFactory central = new CentralFactory();
-			Chicken boiledChicken = central.createChicken();
-			System.out.println("This chicken is " + boiledChicken.getChickenType());
-			Dip spicyDip = central.createDip();
-			System.out.println("This dip is " + spicyDip.getDipType());
+				System.out.print("Enter OEM factory for create: ");
+				Scanner sc = new Scanner(System.in);
+				String className = sc.nextLine();
+				
+				if(className.equals("exit")) {
+					isExit = true;
+				}else {
+					className = "order1."+className;
+					
+					Class<?> c = Class.forName(className);
+					OEMFactory oemFactory = (OEMFactory)c.newInstance();
+					
+					Factory factory = new Factory(oemFactory);
+					factory.getProductType();
+				}
 			
-			OEMFactory bigC = new BigCFactory();
-			Chicken spicyChicken = bigC.createChicken();
-			System.out.println("This chicken is " + spicyChicken.getChickenType());
-			Dip littleSweetDip = bigC.createDip();
-			System.out.println("This dip is " + littleSweetDip.getDipType());
-			Chip frenchFried = bigC.createChip();
-			System.out.println("This chip is " + frenchFried.getChipType());
-		 */
-		
-		Factory factory = new Factory(new CPFactory());
-		factory.getProductType();
+			}while(!isExit);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-
 }

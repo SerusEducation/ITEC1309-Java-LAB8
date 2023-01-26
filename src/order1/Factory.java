@@ -20,6 +20,8 @@ public class Factory {
 	public void getProductType() {
 		System.out.println("This chicken is " + chicken.getChickenType());
 		System.out.println("This dip is " + dip.getDipType());
-		System.out.println("This chip is " + (chip == null ? "sold out" : chip.getChipType()));
+		if (chip != null) {
+			System.out.println("This chip is " + chip.getChipType());
+		}
 	}
 }
