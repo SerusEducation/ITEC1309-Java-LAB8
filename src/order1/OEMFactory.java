@@ -4,4 +4,5 @@ public abstract class OEMFactory {
 	abstract Chicken createChicken();
 	abstract Dip createDip();
 	abstract Chip createChip();
+	abstract Sauce createSauce();
 }

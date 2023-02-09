@@ -1,33 +1,33 @@
 package order1;
 
-public class BigCFactory extends OEMFactory {
+public class KFCFactory extends OEMFactory {
 
-	BigCFactory() {
-		System.out.println("BigC Factory has created!");
+	KFCFactory() {
+		System.out.println("KFC Factory has created!");
 	}
 	
 	@Override
 	Chicken createChicken() {
 		// TODO Auto-generated metabstract String getDipType();hod stub
-		return new SpicyFriedChicken();
+		return new SaltyFriedChicken();
 	}
 
 	@Override
 	Dip createDip() {
 		// TODO Auto-generated method stub
-		return new LittleSweetDip();
+		return new MediumSweetDip();
 	}
 
 	@Override
 	Chip createChip() {
 		// TODO Auto-generated method stub
-		return new FranchFried();
+		return new MashedPotatoes();
 	}
 
 	@Override
 	Sauce createSauce() {
 		// TODO Auto-generated method stub
-		return null;
+		return new NoneSweetKetchup();
 	}
 
 }

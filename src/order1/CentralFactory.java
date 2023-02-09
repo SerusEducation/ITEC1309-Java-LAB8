@@ -24,4 +24,10 @@ public class CentralFactory extends OEMFactory {
 		return null;
 	}
 
+	@Override
+	Sauce createSauce() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

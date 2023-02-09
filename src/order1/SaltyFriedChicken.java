@@ -1,11 +1,11 @@
 package order1;
 
-public class FriedChicken extends Chicken {
+public class SaltyFriedChicken extends Chicken {
 
 	@Override
 	String getChickenType() {
 		// TODO Auto-generated method stub
-		return "Fried Chicken";
+		return "Salty Fried Chicken";
 	}
 
 }

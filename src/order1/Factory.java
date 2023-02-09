@@ -4,6 +4,7 @@ public class Factory {
 	private Chicken chicken;
 	private Dip dip;
 	private Chip chip;
+	private Sauce sauce;
 	
 	/*
 	 * create concreteProduct followed by concreteFactory
@@ -12,6 +13,7 @@ public class Factory {
 		chicken = oemFactory.createChicken();
 		dip = oemFactory.createDip();
 		chip = oemFactory.createChip();
+		sauce = oemFactory.createSauce();
 	}
 	
 	/*
@@ -23,5 +25,9 @@ public class Factory {
 		if (chip != null) {
 			System.out.println("This chip is " + chip.getChipType());
 		}
+		if (sauce != null) {
+			System.out.println("This sauce is " + sauce.getSauceType());
+		}
+		System.out.println("------------------------------------------");
 	}
 }
